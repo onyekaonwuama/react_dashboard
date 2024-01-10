@@ -13,15 +13,6 @@ import Login from "./pages/login/Login";
 import "./styles/global.scss";
 
 function App() {
-  // const router = createBrowserRouter(
-  //   createRoutesFromElements(
-  //     <Route path="/" element={<Home />}>
-  //       {/* <Route index element={<Home />} /> */}
-  //       <Route path="users" element={<Users />} />
-  //       <Route path="products" element={<Products />} />
-  //     </Route>
-  //   )
-  // );
   const Layout = () => {
     return (
       <div className="main" >
