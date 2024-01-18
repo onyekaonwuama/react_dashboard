@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import {
   DataGrid,
   GridColDef,
+  GridRenderCellParams,
   GridToolbar,
-  GridValueGetterParams,
 } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const DataTable = (props: Props) => {
     field: "action",
     headerName: "Action",
     width: 200,
-    renderCell: (params) => {
+    renderCell: (params: GridRenderCellParams) => {
       return (
         <div className="action">
           <Link to={`/${props.slug}/${params.row.id}`}>

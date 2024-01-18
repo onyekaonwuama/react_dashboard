@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./products.scss";
 import DataTable from "../../components/dataTable/DataTable";
 import Add from "../../components/add/Add";
-import {GridColDef} from "@mui/x-data-grid";
+import {GridColDef, GridRenderCellParams} from "@mui/x-data-grid";
 import { products } from "../../data";
 
 const columns: GridColDef[] = [
@@ -11,7 +11,7 @@ const columns: GridColDef[] = [
     field: "img",
     headerName: "Image",
     width: 100,
-    renderCell: (params) => {
+    renderCell: (params: GridRenderCellParams) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
   },

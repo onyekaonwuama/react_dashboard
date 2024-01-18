@@ -1,5 +1,5 @@
 import DataTable from "../../components/dataTable/DataTable";
-import { GridColDef } from "@mui/x-data-grid";
+import { GridColDef, GridRenderCellParams } from "@mui/x-data-grid";
 import { userRows } from "../../data";
 import "./users.scss";
 import { useState } from "react";
@@ -11,7 +11,7 @@ const columns: GridColDef[] = [
     field: "img",
     headerName: "Avatar",
     width: 100,
-    renderCell: (params) => {
+    renderCell: (params: GridRenderCellParams) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
   },
